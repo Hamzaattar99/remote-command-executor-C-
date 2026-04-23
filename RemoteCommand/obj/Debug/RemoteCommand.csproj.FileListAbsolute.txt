@@ -1,0 +1,13 @@
+D:\IT4\projects\network_programming\RemoteCommand\RemoteCommand\bin\Debug\RemoteCommand.exe.config
+D:\IT4\projects\network_programming\RemoteCommand\RemoteCommand\bin\Debug\RemoteCommand.exe
+D:\IT4\projects\network_programming\RemoteCommand\RemoteCommand\bin\Debug\RemoteCommand.pdb
+D:\IT4\projects\network_programming\RemoteCommand\RemoteCommand\bin\Debug\Bunifu_UI_v1.52.dll
+D:\IT4\projects\network_programming\RemoteCommand\RemoteCommand\obj\Debug\RemoteCommand.csprojResolveAssemblyReference.cache
+D:\IT4\projects\network_programming\RemoteCommand\RemoteCommand\obj\Debug\RemoteCommand.MainPage.resources
+D:\IT4\projects\network_programming\RemoteCommand\RemoteCommand\obj\Debug\RemoteCommand.LogsControl.resources
+D:\IT4\projects\network_programming\RemoteCommand\RemoteCommand\obj\Debug\RemoteCommand.MainControl.resources
+D:\IT4\projects\network_programming\RemoteCommand\RemoteCommand\obj\Debug\RemoteCommand.Properties.Resources.resources
+D:\IT4\projects\network_programming\RemoteCommand\RemoteCommand\obj\Debug\RemoteCommand.SessionsControl.resources
+D:\IT4\projects\network_programming\RemoteCommand\RemoteCommand\obj\Debug\RemoteCommand.csproj.GenerateResource.Cache
+D:\IT4\projects\network_programming\RemoteCommand\RemoteCommand\obj\Debug\RemoteCommand.exe
+D:\IT4\projects\network_programming\RemoteCommand\RemoteCommand\obj\Debug\RemoteCommand.pdb
