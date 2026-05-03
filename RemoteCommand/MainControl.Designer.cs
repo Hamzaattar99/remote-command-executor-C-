@@ -31,10 +31,11 @@
             this.clinetsTable = new System.Windows.Forms.DataGridView();
             this.refershButton = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioButtonStartServer = new System.Windows.Forms.RadioButton();
             this.radioButtonStopServer = new System.Windows.Forms.RadioButton();
-            this.ColorAvtiveLable = new System.Windows.Forms.Label();
+            this.radioButtonStartServer = new System.Windows.Forms.RadioButton();
+            this.testLabel = new System.Windows.Forms.Label();
             this.PageTitle = new System.Windows.Forms.Label();
+            this.activeServerColor = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.clinetsTable)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -67,16 +68,6 @@
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             // 
-            // radioButtonStartServer
-            // 
-            this.radioButtonStartServer.AutoSize = true;
-            this.radioButtonStartServer.Location = new System.Drawing.Point(31, 13);
-            this.radioButtonStartServer.Name = "radioButtonStartServer";
-            this.radioButtonStartServer.Size = new System.Drawing.Size(107, 19);
-            this.radioButtonStartServer.TabIndex = 0;
-            this.radioButtonStartServer.Text = "Start Server";
-            this.radioButtonStartServer.UseVisualStyleBackColor = true;
-            // 
             // radioButtonStopServer
             // 
             this.radioButtonStopServer.AutoSize = true;
@@ -88,15 +79,27 @@
             this.radioButtonStopServer.TabStop = true;
             this.radioButtonStopServer.Text = "Stop Server";
             this.radioButtonStopServer.UseVisualStyleBackColor = true;
+            this.radioButtonStopServer.CheckedChanged += new System.EventHandler(this.radioButtonStopServer_CheckedChanged);
             // 
-            // ColorAvtiveLable
+            // radioButtonStartServer
             // 
-            this.ColorAvtiveLable.AutoSize = true;
-            this.ColorAvtiveLable.Location = new System.Drawing.Point(552, 64);
-            this.ColorAvtiveLable.Name = "ColorAvtiveLable";
-            this.ColorAvtiveLable.Size = new System.Drawing.Size(88, 13);
-            this.ColorAvtiveLable.TabIndex = 2;
-            this.ColorAvtiveLable.Text = "ColorAvtiveLable";
+            this.radioButtonStartServer.AutoSize = true;
+            this.radioButtonStartServer.Location = new System.Drawing.Point(31, 13);
+            this.radioButtonStartServer.Name = "radioButtonStartServer";
+            this.radioButtonStartServer.Size = new System.Drawing.Size(107, 19);
+            this.radioButtonStartServer.TabIndex = 0;
+            this.radioButtonStartServer.Text = "Start Server";
+            this.radioButtonStartServer.UseVisualStyleBackColor = true;
+            this.radioButtonStartServer.CheckedChanged += new System.EventHandler(this.radioButtonStartServer_CheckedChanged);
+            // 
+            // testLabel
+            // 
+            this.testLabel.AutoSize = true;
+            this.testLabel.Location = new System.Drawing.Point(117, 21);
+            this.testLabel.Name = "testLabel";
+            this.testLabel.Size = new System.Drawing.Size(53, 13);
+            this.testLabel.TabIndex = 2;
+            this.testLabel.Text = "TestLabel";
             // 
             // PageTitle
             // 
@@ -108,17 +111,27 @@
             this.PageTitle.TabIndex = 3;
             this.PageTitle.Text = "Clients";
             // 
+            // activeServerColor
+            // 
+            this.activeServerColor.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.activeServerColor.Location = new System.Drawing.Point(565, 41);
+            this.activeServerColor.Name = "activeServerColor";
+            this.activeServerColor.Size = new System.Drawing.Size(63, 25);
+            this.activeServerColor.TabIndex = 4;
+            // 
             // MainControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.activeServerColor);
             this.Controls.Add(this.PageTitle);
-            this.Controls.Add(this.ColorAvtiveLable);
+            this.Controls.Add(this.testLabel);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.refershButton);
             this.Controls.Add(this.clinetsTable);
             this.Name = "MainControl";
             this.Size = new System.Drawing.Size(654, 387);
+            this.Load += new System.EventHandler(this.MainControl_Load);
             ((System.ComponentModel.ISupportInitialize)(this.clinetsTable)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -134,7 +147,8 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton radioButtonStopServer;
         private System.Windows.Forms.RadioButton radioButtonStartServer;
-        private System.Windows.Forms.Label ColorAvtiveLable;
+        private System.Windows.Forms.Label testLabel;
         private System.Windows.Forms.Label PageTitle;
+        private System.Windows.Forms.Panel activeServerColor;
     }
 }

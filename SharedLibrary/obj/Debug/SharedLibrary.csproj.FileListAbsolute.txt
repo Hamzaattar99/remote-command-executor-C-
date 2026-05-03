@@ -1,5 +1,4 @@
 D:\IT4\projects\network_programming\RemoteCommand\SharedLibrary\bin\Debug\SharedLibrary.dll
 D:\IT4\projects\network_programming\RemoteCommand\SharedLibrary\bin\Debug\SharedLibrary.pdb
-D:\IT4\projects\network_programming\RemoteCommand\SharedLibrary\obj\Debug\SharedLibrary.csprojResolveAssemblyReference.cache
 D:\IT4\projects\network_programming\RemoteCommand\SharedLibrary\obj\Debug\SharedLibrary.dll
 D:\IT4\projects\network_programming\RemoteCommand\SharedLibrary\obj\Debug\SharedLibrary.pdb

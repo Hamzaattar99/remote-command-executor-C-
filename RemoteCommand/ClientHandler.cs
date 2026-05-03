@@ -34,7 +34,7 @@ namespace RemoteCommand
         }
 
 
-        public async void Send(IPPacketInformation packet)
+        public async void Send(Packet packet)
         {
             byte [] data = PacketSerializer.Serialize(packet);
             await Stream.WriteAsync(data, 0, data.Length);
@@ -55,7 +55,7 @@ namespace RemoteCommand
                     if (bytesRead == 0) break;
 
 
-                    Packet packet = PacketSerializer.Derialize(buffer);
+                    Packet packet = PacketSerializer.Deserialize(buffer);
 
                     OnPacketReceived.Invoke(this, packet);
                 }

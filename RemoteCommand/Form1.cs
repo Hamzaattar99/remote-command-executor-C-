@@ -16,6 +16,8 @@ namespace RemoteCommand
         {
             InitializeComponent();
             LoadControl(mainCtlr);
+
+           
         }
 
         MainControl mainCtlr = new MainControl();

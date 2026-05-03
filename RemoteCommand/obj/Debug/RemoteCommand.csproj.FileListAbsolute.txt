@@ -12,3 +12,5 @@ D:\IT4\projects\network_programming\RemoteCommand\RemoteCommand\obj\Debug\Remote
 D:\IT4\projects\network_programming\RemoteCommand\RemoteCommand\obj\Debug\RemoteCommand.exe
 D:\IT4\projects\network_programming\RemoteCommand\RemoteCommand\obj\Debug\RemoteCommand.pdb
 D:\IT4\projects\network_programming\RemoteCommand\RemoteCommand\obj\Debug\RemoteCommand.UserControl1.resources
+D:\IT4\projects\network_programming\RemoteCommand\RemoteCommand\bin\Debug\SharedLibrary.dll
+D:\IT4\projects\network_programming\RemoteCommand\RemoteCommand\bin\Debug\SharedLibrary.pdb
