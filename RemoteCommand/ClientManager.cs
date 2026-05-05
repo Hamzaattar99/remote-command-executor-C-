@@ -20,15 +20,29 @@ namespace RemoteCommand
             get { return _clients; }
         }
 
+        public event Action<ClientHandler> OnClientAdded;
+        public event Action<ClientHandler> OnClientRemoved;
+
 
         public void Add(ClientHandler client)
         {
             _clients.Add(client);
+
+            if(OnClientAdded != null)
+            {
+                OnClientAdded.Invoke(client);
+            }
+            
         }
 
         public void Remove(ClientHandler client)
         {
             _clients.Remove(client);
+
+            if (OnClientRemoved != null)
+            {
+                OnClientRemoved.Invoke(client);
+            }
         }
 
         public ClientHandler GetId(string id)

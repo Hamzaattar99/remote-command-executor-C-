@@ -18,6 +18,8 @@ namespace RemoteCommand
 
         public string Id { get; set; }
 
+        public ClientInfo Info { get; set; }
+
         public event Action<ClientHandler, Packet> OnPacketReceived;
         public event Action<ClientHandler> OnDisconnected;
 
@@ -57,7 +59,12 @@ namespace RemoteCommand
 
                     Packet packet = PacketSerializer.Deserialize(buffer);
 
-                    OnPacketReceived.Invoke(this, packet);
+                    if (OnPacketReceived != null)
+                    {
+
+
+                        OnPacketReceived.Invoke(this, packet);
+                    }
                 }
 
                 
@@ -68,7 +75,11 @@ namespace RemoteCommand
                 MessageBox.Show(ex.Message);
             }
 
-            OnDisconnected.Invoke(this);
+
+            if (OnDisconnected != null)
+            {
+                OnDisconnected.Invoke(this);
+            }
         }
     }
 }

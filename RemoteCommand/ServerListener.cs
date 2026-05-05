@@ -38,7 +38,13 @@ namespace RemoteCommand
             while(_isRunning)
             {
                 TcpClient client = await _listener.AcceptTcpClientAsync();
-                OnClinetConnected.Invoke(client);
+
+                if (OnClinetConnected != null)
+                {
+
+
+                    OnClinetConnected.Invoke(client);
+                }
             }
         }
     }

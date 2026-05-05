@@ -29,6 +29,12 @@
         private void InitializeComponent()
         {
             this.clinetsTable = new System.Windows.Forms.DataGridView();
+            this.id_col = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.host_col = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ip_col = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.port_col = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mac_col = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.conTime_col = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.refershButton = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.radioButtonStopServer = new System.Windows.Forms.RadioButton();
@@ -43,10 +49,53 @@
             // clinetsTable
             // 
             this.clinetsTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.clinetsTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id_col,
+            this.host_col,
+            this.ip_col,
+            this.port_col,
+            this.mac_col,
+            this.conTime_col});
             this.clinetsTable.Location = new System.Drawing.Point(14, 83);
             this.clinetsTable.Name = "clinetsTable";
             this.clinetsTable.Size = new System.Drawing.Size(637, 263);
             this.clinetsTable.TabIndex = 0;
+            // 
+            // id_col
+            // 
+            this.id_col.HeaderText = "ID";
+            this.id_col.Name = "id_col";
+            this.id_col.ReadOnly = true;
+            // 
+            // host_col
+            // 
+            this.host_col.HeaderText = "Hostname";
+            this.host_col.Name = "host_col";
+            this.host_col.ReadOnly = true;
+            // 
+            // ip_col
+            // 
+            this.ip_col.HeaderText = "IP";
+            this.ip_col.Name = "ip_col";
+            this.ip_col.ReadOnly = true;
+            // 
+            // port_col
+            // 
+            this.port_col.HeaderText = "Port";
+            this.port_col.Name = "port_col";
+            this.port_col.ReadOnly = true;
+            // 
+            // mac_col
+            // 
+            this.mac_col.HeaderText = "Mac Address";
+            this.mac_col.Name = "mac_col";
+            this.mac_col.ReadOnly = true;
+            // 
+            // conTime_col
+            // 
+            this.conTime_col.HeaderText = "ConnectedTime";
+            this.conTime_col.Name = "conTime_col";
+            this.conTime_col.ReadOnly = true;
             // 
             // refershButton
             // 
@@ -56,6 +105,7 @@
             this.refershButton.TabIndex = 1;
             this.refershButton.Text = "Refersh";
             this.refershButton.UseVisualStyleBackColor = true;
+            this.refershButton.Click += new System.EventHandler(this.refershButton_Click);
             // 
             // groupBox1
             // 
@@ -130,7 +180,7 @@
             this.Controls.Add(this.refershButton);
             this.Controls.Add(this.clinetsTable);
             this.Name = "MainControl";
-            this.Size = new System.Drawing.Size(654, 387);
+            this.Size = new System.Drawing.Size(665, 387);
             this.Load += new System.EventHandler(this.MainControl_Load);
             ((System.ComponentModel.ISupportInitialize)(this.clinetsTable)).EndInit();
             this.groupBox1.ResumeLayout(false);
@@ -150,5 +200,11 @@
         private System.Windows.Forms.Label testLabel;
         private System.Windows.Forms.Label PageTitle;
         private System.Windows.Forms.Panel activeServerColor;
+        private System.Windows.Forms.DataGridViewButtonColumn id_col;
+        private System.Windows.Forms.DataGridViewTextBoxColumn host_col;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ip_col;
+        private System.Windows.Forms.DataGridViewTextBoxColumn port_col;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mac_col;
+        private System.Windows.Forms.DataGridViewTextBoxColumn conTime_col;
     }
 }

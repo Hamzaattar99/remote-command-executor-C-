@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Net;
 using System.Net.Sockets;
+using System.Windows.Forms;
 
 namespace Client
 {
@@ -15,13 +16,23 @@ namespace Client
 
         public void Start()
         {
-            _connection = new ServerConnection();
-            _handler = new CommandHandler(_connection);
+            try
+            {
 
 
-            _connection.OnPacketReceived += _handler.Handle;
+                _connection = new ServerConnection();
+                _handler = new CommandHandler(_connection);
 
-            _connection.Connect();
+
+                _connection.OnPacketReceived += _handler.Handle;
+
+                _connection.Connect();
+            }
+            catch
+            {
+                MessageBox.Show("Failed to operate the client!!!");
+                Application.Exit();
+            }
         }
     }
 }
